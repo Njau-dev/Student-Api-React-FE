@@ -38,7 +38,7 @@ const Register = () => {
                 <button type="submit">Register</button>
             </form>
             <p onClick={() => navigate('/')}>
-                Already have an account? Login here.
+                Already have an account? <span>Login here.</span>
             </p>
         </div>
     );

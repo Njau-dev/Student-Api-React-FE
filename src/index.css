@@ -1,13 +1,35 @@
-/* src/index.css */
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f8fa;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#root {
+  width: 100%;
+}
+
+span {
+  color: #4CAF50;
+}
+
+.app-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.dash-container {
+  margin: 70px auto;
+  /* overflow: hidden; */
+  max-width: 800px;
 }
 
 .container {
@@ -55,4 +77,75 @@ body {
   margin-top: 15px;
   color: #555;
   cursor: pointer;
+}
+
+/* navbar */
+.navbar {
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  background-color: #f4f4f9;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-link:hover {
+  color: #007bff;
+}
+
+/* student management */
+.student-management {
+  padding: 20px;
+  max-width: 600px;
+  margin: 70px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-management h2 {
+  text-align: center;
+}
+
+.student-management-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.student-link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.student-link:hover {
+  color: #0056b3;
+}
+
+
+.student-form-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 70px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-form-container h3 {
+  text-align: center;
 }

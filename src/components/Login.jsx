@@ -1,10 +1,11 @@
+// In Login.js
 import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-const Login = () => {
 
+const Login = ({ setUserToken }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -13,7 +14,13 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post('http://127.0.0.1:4000/login', { email, password });
-            localStorage.setItem('accessToken', response.data.accessToken);
+            const accessToken = response.data.accessToken;
+
+            // Set token in local storage and update state in App
+            localStorage.setItem('accessToken', accessToken);
+            setUserToken(accessToken);
+
+            // Redirect to dashboard
             navigate('/dashboard');
         } catch (error) {
             console.error('Login failed', error);
@@ -41,10 +48,10 @@ const Login = () => {
                 <button type="submit">Login</button>
             </form>
             <p onClick={() => navigate('/register')}>
-                Don't have an account? Register here.
+                Don't have an account? <span>Register here.</span>
             </p>
         </div>
-    )
-}
+    );
+};
 
-export default Login
+export default Login;

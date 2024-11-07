@@ -1,10 +1,11 @@
+import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="navbar">
-            <h1>Student App</h1>
+        <nav className="navbar-f">
+            <AcademicCapIcon className='iconsss' />
 
             <div>
                 <Link to="/dashboard" className="navbar-link">Dashboard</Link>

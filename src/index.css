@@ -1,4 +1,4 @@
-body {
+.body {
   font-family: Arial, sans-serif;
   background-color: #f7f8fa;
   display: flex;
@@ -14,6 +14,10 @@ body {
 
 span {
   color: #4CAF50;
+}
+
+.iconsss {
+  height: 2rem;
 }
 
 .app-container {
@@ -32,8 +36,8 @@ span {
   max-width: 800px;
 }
 
-.container {
-  width: 300px;
+.login-container {
+  width: 400px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -41,27 +45,27 @@ span {
   text-align: center;
 }
 
-.container h2 {
+.login-container h2 {
   margin-bottom: 20px;
   color: #333;
 }
 
-.container form {
+.login-container form {
   display: flex;
   flex-direction: column;
 }
 
-.container input {
+.login-container input {
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
-.container button {
+.login-container button {
   padding: 10px;
   margin-top: 10px;
-  background-color: #4CAF50;
+  background-color: #333;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -69,30 +73,32 @@ span {
   transition: background-color 0.3s ease;
 }
 
-.container button:hover {
+.login-container button:hover {
   background-color: #45a049;
 }
 
-.container p {
+.login-container p {
   margin-top: 15px;
   color: #555;
   cursor: pointer;
 }
 
 /* navbar */
-.navbar {
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.navbar-f {
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-around;
   gap: 15px;
   background-color: #f4f4f9;
-  width: 100%;
-  position: absolute;
-  top: 0;
+  width: 65%;
+  position: fixed;
+  top: 1rem;
+  border-radius: 4rem;
+  /* border: 1px solid #333; */
 }
 
-.navbar div {
+.navbar-f div {
   display: flex;
   align-items: center;
 }
@@ -104,13 +110,13 @@ span {
 }
 
 .navbar-link:hover {
-  color: #007bff;
+  color: #45a049;
 }
 
 /* student management */
 .student-management {
   padding: 20px;
-  max-width: 600px;
+  min-width: 800px;
   margin: 70px auto;
   background-color: #fff;
   border-radius: 8px;
@@ -119,6 +125,21 @@ span {
 
 .student-management h2 {
   text-align: center;
+  margin: 2rem 0;
+}
+
+.student-management ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+
+}
+
+.student-management ul li {
+  background-color: #383838;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .student-management-list {
@@ -129,11 +150,11 @@ span {
 
 .student-link {
   text-decoration: none;
-  color: #007bff;
+  color: #ffffff;
 }
 
 .student-link:hover {
-  color: #0056b3;
+  color: #45a049;
 }
 
 
@@ -148,4 +169,170 @@ span {
 
 .student-form-container h3 {
   text-align: center;
+}
+
+/* Add student form */
+/* General form container styling */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Heading style */
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Form field styling */
+.form-container label {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.form-container button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+/* Student details */
+/* Button styling */
+.view-btn,
+.edit-btn,
+.delete-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.view-btn {
+  background-color: #2196F3;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+.edit-btn:hover,
+.delete-btn:hover,
+.view-btn:hover {
+  opacity: 0.8;
+}
+
+
+
+.view-student {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.view-student h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.view-student p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.view-student p strong {
+  color: #000;
+  font-weight: bold;
+}
+
+.view-student a {
+  text-decoration: none;
+}
+
+/* Style for the Edit form */
+
+.edit-student-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.edit-student-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+.edit-student-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.edit-student-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.edit-student-container input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.edit-student-container .button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-student-container .button-group button {
+  width: 48%;
 }

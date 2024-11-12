@@ -53,9 +53,9 @@ const StudentDetails = () => {
                 <article>
                     <h2>Student Details</h2>
 
-                    <p><strong>Name:</strong> {students.firstname}</p>
-                    <p><strong>Admission no:</strong> {students.lastname}</p>
-                    <p><strong>E-mail:</strong> {students.gender}</p>
+                    <p><strong>First Name :</strong> {students.firstname}</p>
+                    <p><strong>Last Name :</strong> {students.lastname}</p>
+                    <p><strong>Gender :</strong> {students.gender}</p>
                     {/* <p><strong>Course:</strong> {students.course}</p> */}
 
 

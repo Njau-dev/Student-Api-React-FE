@@ -43,7 +43,7 @@ const AllStudents = () => {
     }, []);
 
     return (
-        <div className='class="d-flex justify-content-center align-items-center mx-auto col-md-12'>
+        <div className='class="d-flex justify-content-center mx-auto col-md-12'>
 
             <div className="mt-3">
 

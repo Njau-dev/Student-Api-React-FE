@@ -12,9 +12,7 @@ const AllStudents = () => {
     const navigate = useNavigate();
 
     const loadEdit = (id) => {
-        // navigate("/students/updatestudent/" + id);
         navigate(`/students/updatestudent/${id}`);
-
     }
 
     const LoadStudent = (id) => {
@@ -22,7 +20,7 @@ const AllStudents = () => {
     }
 
     useEffect(() => {
-        const userToken = localStorage.getItem('accessToken');
+        const userToken = sessionStorage.getItem('accessToken');
         axios
             .get('http://localhost:4000/getallstudents', {
                 headers: {
@@ -35,7 +33,7 @@ const AllStudents = () => {
                 setRecords(res.data);
             })
             .catch((err) => {
-                if (err.response.status === 403) {
+                if (err.response.status === 401) {
                     setUnauthorized(true);
                 }
             })

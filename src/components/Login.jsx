@@ -1,48 +1,39 @@
-// In Login.js
-import React from 'react';
-import axios from 'axios';
+import { useState, useContext } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
-
-const Login = ({ setUserToken }) => {
+const Login = () => {
+    const { login, error, loading } = useContext(AuthContext); // Get login function and error from context
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleLogin = async (e) => {
+    const handleEmail = (e) => setEmail(e.target.value);
+    const handlePassword = (e) => setPassword(e.target.value);
+
+    const loginUser = async (e) => {
         e.preventDefault();
-        try {
-            const response = await axios.post('http://127.0.0.1:4000/login', { email, password });
-            const accessToken = response.data.accessToken;
-
-            // Set token in local storage and update state in App
-            localStorage.setItem('accessToken', accessToken);
-            setUserToken(accessToken);
-
-            // Redirect to dashboard
-            navigate('/dashboard');
-        } catch (error) {
-            console.error('Login failed', error);
-        }
+        await login(email, password, () => navigate("/students"));
     };
 
     return (
         <div className="login-container">
             <h2>Login</h2>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={loginUser}>
                 <input
                     type="email"
                     placeholder="Email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={handleEmail}
                     required
                 />
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={handlePassword}
                     required
                 />
                 <button type="submit">Login</button>
@@ -52,6 +43,6 @@ const Login = ({ setUserToken }) => {
             </p>
         </div>
     );
-};
+}
 
 export default Login;

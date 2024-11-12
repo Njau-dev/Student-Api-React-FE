@@ -14,23 +14,22 @@ const AddStudent = () => {
         setData({ ...data, [e.target.name]: e.target.value });
     };
 
-    const saveStudent = (e) => {
+    const saveStudent = async (e) => {
         e.preventDefault();
-        const userToken = localStorage.getItem('accessToken');
-
-        axios.post('http://localhost:4000/addstudent', data, {
-            headers: {
-                Authorization: `Bearer ${userToken}`,
-                'Content-Type': 'application/json',
-            },
-        })
-            .then(res => {
-                toast.success("Student added successfully!");
-            })
-            .catch((error) => {
-                toast.error("Failed to add student. Please try again.");
+        try {
+            const userToken = sessionStorage.getItem('accessToken');
+            await axios.post('http://localhost:4000/addstudent', data, {
+                headers: {
+                    Authorization: `Bearer ${userToken}`,
+                    'Content-Type': 'application/json',
+                },
             });
+            toast.success("Student added successfully!");
+        } catch (error) {
+            toast.error("Failed to add student. Please try again.");
+        }
     };
+
 
     return (
         <div className="form-container">

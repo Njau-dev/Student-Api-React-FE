@@ -20,6 +20,11 @@ span {
   height: 2rem;
 }
 
+.profile-icon {
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
 .app-container {
   width: 100%;
   display: flex;
@@ -157,7 +162,6 @@ span {
   color: #45a049;
 }
 
-
 .student-form-container {
   padding: 20px;
   max-width: 600px;
@@ -230,7 +234,7 @@ span {
 .view-btn,
 .edit-btn,
 .delete-btn {
-  background-color: #4CAF50;
+  background-color: #333;
   border: none;
   color: white;
   padding: 8px 12px;
@@ -240,20 +244,22 @@ span {
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.view-btn {
+/* .view-btn {
   background-color: #2196F3;
-}
+} */
 
-.delete-btn {
+.delete-btn:hover {
   background-color: #f44336;
 }
 
 .edit-btn:hover,
-.delete-btn:hover,
 .view-btn:hover {
-  opacity: 0.8;
+  background-color: #4CAF50;
 }
 
 
@@ -263,6 +269,7 @@ span {
   margin: 50px auto;
   padding: 20px;
   border: 1px solid #ddd;
+  border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -298,6 +305,7 @@ span {
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  border-radius: 8px;
 }
 
 .edit-student-container h2 {

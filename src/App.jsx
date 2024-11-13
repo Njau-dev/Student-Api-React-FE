@@ -11,6 +11,7 @@ import StudentDetails from './components/StudentDetails';
 import UpdateStudent from './components/UpdateStudent';
 import { ToastContainer } from 'react-toastify';
 import { AuthProvider } from '../context/AuthContext';
+import LogOut from './components/LogOut';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/students/allstudents" element={<AllStudents />} />
           <Route path="/students/studentdetails/:id" element={<StudentDetails />} />
           <Route path="/students/updatestudent/:id" element={<UpdateStudent />} />
+          <Route path="/user/logout" element={<LogOut />} />
         </Routes>
         <ToastContainer />
       </div>

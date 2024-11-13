@@ -47,7 +47,7 @@ const AllStudents = () => {
 
             <div className="mt-3">
 
-                <h3> All Students Details </h3>
+                <h3 className="mb-4 text-center"> All Students Details </h3>
                 <div className="table-responsive">
                     <table className="table table-bordered table-md">
                         <thead>

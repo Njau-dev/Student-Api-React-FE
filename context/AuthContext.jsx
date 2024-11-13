@@ -9,7 +9,7 @@ const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const login = async (email, password, onSuccess) => {
         setLoading(true);

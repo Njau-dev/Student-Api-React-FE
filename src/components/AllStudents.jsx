@@ -55,6 +55,7 @@ const AllStudents = () => {
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Gender</th>
+                                <th>Course</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -64,6 +65,7 @@ const AllStudents = () => {
                                     <td>{r.firstname}</td>
                                     <td>{r.lastname}</td>
                                     <td>{r.gender}</td>
+                                    <td>{r.course_id}</td>
                                     <td>
                                         <Dropdown>
                                             <Dropdown.Toggle variant="default" id="dropdown-basic" size="md">

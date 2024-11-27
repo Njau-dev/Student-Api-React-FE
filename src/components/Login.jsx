@@ -15,7 +15,7 @@ const Login = () => {
 
     const loginUser = async (e) => {
         e.preventDefault();
-        await login(email, password, () => navigate("/students"));
+        await login(email, password, () => navigate("/dashboard"));
     };
 
     return (

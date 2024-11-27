@@ -11,7 +11,6 @@ const Navbar = () => {
 
             <div>
                 <Link to="/dashboard" className="navbar-link">Dashboard</Link>
-                <Link to="/students" className="navbar-link">Student Management</Link>
                 <div>
                     <UserIcon className='profile-icon' />
                     <Dropdown>
